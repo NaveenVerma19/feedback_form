@@ -15,17 +15,27 @@ def home(request):
             data.last_name = form.cleaned_data['last_name']
             data.tour_start_date = form.cleaned_data['tour_start_date']
             data.vehicle_condition = form.cleaned_data['vehicle_condition']
+            data.driver_support = form.cleaned_data['driver_support']
+            data.guide_support = form.cleaned_data['guide_support']
+            data.hotels_chosen = form.cleaned_data['hotels_chosen']
+            data.ground_support_team = form.cleaned_data['ground_support_team']
+            data.destination_rating = form.cleaned_data['destination_rating']
+            data.tour_services_rating = form.cleaned_data['tour_services_rating']
+            data.improve_services = form.cleaned_data['improve_services']
             data.save()
             print(data)
             # form.save()
             # Handle successful form submission
-            return redirect('home')
+            return redirect('thankpage')
 
     contest = {
         'form': form
     }
     return render(request, 'tourfeedback.html', contest)
 
+
+def thankpage(request):
+    return render(request, 'thankpage.html')
 
 # def submit_review(request, product_id):
 #     url = request.META.get('HTTP_REFERER')

@@ -8,7 +8,7 @@ class TourFeedbackform(ModelForm):
         fields = '__all__'
         
         
-class ReviewRatingForm(ModelForm):
-    class Meta:
-        model = ReviewRating
-        fields = ['subject', 'review', 'rating']
+# class ReviewRatingForm(ModelForm):
+#     class Meta:
+#         model = ReviewRating
+#         fields = ['subject', 'review', 'rating']
